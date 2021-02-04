@@ -1,0 +1,37 @@
+{% extends "first_app/base.html" %}
+
+{% block tittle %}
+    Posts Page
+{% endblock tittle %}  
+
+{% block content %}
+<div class="card-img-overlay">
+      <h2 class="card-title"><center><span class="letter">POSTS</span></center></h2>
+      <p class="card-text"><center><span class="letter2">You can see the posts that others have shared.</span></center></p>
+      <p class="card-text"><center><span class="letter2">If you want, you can update or delete the posts.</span></center></p>
+
+    
+        {% for post in post_list %}
+    <div class="post_table">
+      <div class="card text-dark bg-info mb-3" style="max-width: 18rem;">
+    <div class="card-header">{{ post.date }}</div>
+    <div class="card-body">
+        <h5 class="card-title">{{ post.title }}</h5>
+        <p class="card-text">{{ post.description }}</p>
+        <td><a class="btn btn-outline-success" href="{% url 'update' post.id %}" role="button">Update</a></td>
+        <td><a class="btn btn-outline-danger" href="{% url 'delete' post.id %}" role="button">Delete</a></td>
+    </div>
+    </div>
+
+    </div>
+
+
+    {% endfor %}
+
+
+
+
+  
+
+
+  {% endblock content %}

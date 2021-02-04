@@ -1,0 +1,49 @@
+{% extends "first_app/base.html" %}
+
+{% block tittle %}
+    Home Page
+{% endblock tittle %}  
+
+{% block content %}
+<div class="card-img-overlay">
+      <h2 class="card-title"><center><span class="letter">Welcome to the Post Page</span></center></h2>
+      <p class="card-text"><center><span class="letter2">Our Post Page where you can shape as you wish and share your thoughts freely.</span></center></p>
+      <p class="card-text"><center><span class="letter2">We recommend that you read the rules below before posting.</span></center></p>
+
+
+<div class="container">
+
+      <div class="row">
+    <div class="col-4">
+      <div class="list-group" id="list-tab" role="tablist">
+        <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="list" href="#list-home" role="tab" aria-controls="home">Swearing / Insult</a>
+        <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Advertisement</a>
+        <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Hate speech</a>
+        <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Social Integrity</a>
+      </div>
+    </div>
+    <div class="col-8">
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list"><span class="letter3">Swearing and using inappropriate content in comments is prohibited. Comments containing swearing and / or inappropriate content in any language will be deleted, and the author will be removed from the page without warning. (Swearing abbreviations (wtf etc.) are also prohibited.)</span></div>
+        <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list"><span class="letter3">You may not post, broadcast or view video content that contains third-party advertising, such as pre-roll video ads or sponsorship graphics, through our services without your prior consent.</span></div>
+        <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list"><span class="letter3">You may not support violence against others or threaten or harass other people based on race, ethnicity, national origin, social class, sexual orientation, gender, gender identity, religious belief, age, disability or serious illness.</span></div>
+        <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list"><span class="letter3">You may not use the page to manipulate or influence elections or other social processes. This includes posting or sharing content that may reduce participation or mislead people about when, where or how to participate in a social process.</span></div>
+      </div>
+    </div>
+  </div>
+      
+  </div>
+  <div class="container2">
+        <h3 class="display-6"><center><span class="letter">Sample Series Lines</span></center></h3>
+        <p class="lead"><center><span class="letter2">“Bizler kimliklerimizin tutsağıyız. Kendi yarattığımız hapishanelerde yaşıyoruz.” -Prison Break</span></center></p>
+        <p class="lead"><center><span class="letter2">"Düşünün… Çünkü henüz yasaklanmadı." -Schindler’in Listesi</span></center></p>
+        <p class="lead"><center><span class="letter2">"Deliler mükemmel dava konularıdır. Konuşurlar ama kimse dinlemez." -Zindan Adası</span></center></p>
+        <div class="text-center">
+        <a class="btn btn-outline-primary" href="{% url 'create' %}" role="button">Add to New Post</a>        
+        </div>
+    </div>
+  </div>
+
+  
+
+  {% endblock content %}

@@ -1,0 +1,49 @@
+{% extends "first_app/base.html" %}
+
+{% block tittle %}
+    Create Page
+{% endblock tittle %}  
+
+{% block content %}
+<div class="card-img-overlay">
+      <h2 class="card-title"><center><span class="letter">Add to New Post</span></center></h2>
+      <p class="card-text"><center><span class="letter2">You can easily share your posts on the page.</span></center></p>
+      <p class="card-text"><center><span class="letter2">If you haven't read the rules, we recommend that you read the page rules on the homepage.</span></center></p>
+
+
+
+<form method="POST" class="was-validated">
+{% csrf_token %}
+    <div class="mb-3">
+        <label for="validationTextarea" class="form-label">Title</label>
+        <textarea class="form-control is-invalid" id="validationTextarea" name="title" placeholder="Required the title" required></textarea>
+        <div class="invalid-feedback">
+        Please enter the title
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="validationTextarea" class="form-label">Description</label>
+        <textarea class="form-control is-invalid" id="validationTextarea" name="description" placeholder="Required the description" required></textarea>
+        <div class="invalid-feedback">
+        Please enter the description
+        </div>
+    </div>
+
+    <div class="form-check mb-3">
+        <input type="checkbox" class="form-check-input" id="validationFormCheck1" required>
+        <label class="form-check-label" for="validationFormCheck1">Confirm</label>
+        <div class="invalid-feedback">You need to confirm by clicking this section</div>
+    </div>
+
+    
+
+    
+
+    <div class="col-8">
+    <button class="btn btn-primary" type="submit">Send</button>
+     
+  </div>
+    </form>
+
+
+  {% endblock content %}

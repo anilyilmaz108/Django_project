@@ -1,0 +1,12 @@
+.container{ width: auto; height: auto; margin: 50px 20px; float: left; }
+.container2{ width: auto; height: auto; margin: 50px 500px; float: left; }
+.post_table{ width: auto; height: auto; margin: 20px; float: left; }
+#bg{  background: url("images/walpaper.jfif") no-repeat center center fixed; 
+	background-size: cover;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;}
+
+.letter{ color: #16034f; }
+.letter2{ color: #051893; }
+.letter3{ color: #000000; }
